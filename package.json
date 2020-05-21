@@ -1,0 +1,26 @@
+{
+  "name": "webpack-code-splitting",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/max-kim-tutorial/code-splitting-webpack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/max-kim-tutorial/code-splitting-webpack/issues"
+  },
+  "homepage": "https://github.com/max-kim-tutorial/code-splitting-webpack#readme",
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "react": "^16.13.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  }
+}
