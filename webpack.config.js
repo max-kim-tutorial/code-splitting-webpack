@@ -1,24 +1,25 @@
 const path = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+var HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: {
-    page1: "./src/index1.js",
+    index: "./src/index.js",
   },
   output: {
-    filename: "[name].js",
+    filename: "[name].bundle.js",
+    chunkFilename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist"),
   },
   devServer: {
     hot: true,
     port: 9000,
   },
-  optimization: {
-    splitChunks: {
-      chunks: "all",
-      name: "vendor",
-    },
-  },
-  plugins: [new CleanWebpackPlugin()],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "public/index.html",
+    }),
+    new CleanWebpackPlugin(),
+  ],
   mode: "production",
 };
