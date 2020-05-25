@@ -1,9 +1,9 @@
 // 진입점
-import clickEvent from "./clickEvent";
-
 const init = () => {
   const button = document.querySelector(".btn");
-  button.addEventListener("click", clickEvent);
+  import(/* webpackChunkName: "click" */ "./clickEvent").then((click) => {
+    button.addEventListener("click", click.default);
+  });
 };
 
 init();
